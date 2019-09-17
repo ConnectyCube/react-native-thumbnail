@@ -71,7 +71,8 @@ public class RNThumbnailModule extends ReactContextBaseJavaModule {
       map.putString("path", "file://" + fullPath + '/' + fileName);
       map.putDouble("width", image.getWidth());
       map.putDouble("height", image.getHeight());
-
+      map.putDouble("size", image.getByteCount());
+      
       promise.resolve(map);
 
     } catch (Exception e) {
